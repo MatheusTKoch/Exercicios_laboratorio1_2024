@@ -48,17 +48,20 @@ public class Calculadora {
         this.memoria = memoria;
     }
 
-    /**
-     * Metodo para somar valores e salvar soma na memoria
-     * @param num1
-     * @param num2
-     */
-    public void somaNumeros(double num1, double num2) {
-        double soma;
-        soma = num1 + num2;
-        memoria = soma;
+    public double soma(double num1, double num2) {
+        return num1 + num2;
     }
-    
 
-    
+     public double subtrai(double num1, double num2) {
+        return num1 - num2;
+     }
+
+     public double multiplica(double num1, double num2) {
+        return num1 * num2;
+     }
+
+     public double divide(double num1, double num2) {
+        return num1 / num2;
+     }
+
 }
