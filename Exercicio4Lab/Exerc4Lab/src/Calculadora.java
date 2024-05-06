@@ -64,4 +64,16 @@ public class Calculadora {
         return num1 / num2;
      }
 
+     public int elevaAoQuadrado(int num) {
+        return num * num;
+     }
+
+     public int elevaAoCubo(int num) {
+        return num * num * num;
+     }
+
+     public void imprimeInfo() {
+        System.out.println("Memoria" + memoria);
+        System.out.println("Cor" + cor);
+     }
 }
