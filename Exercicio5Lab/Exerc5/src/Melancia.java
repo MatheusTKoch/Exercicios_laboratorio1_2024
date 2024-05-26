@@ -16,5 +16,19 @@ public class Melancia extends Fruta {
         return estaNaEpoca;
     }
 
-    
+    public void setPrecoAdicional() {
+        this.precoAdicional = precoAdicional;
+    }
+
+    public void setEpocaFruta() {
+        this.estaNaEpoca = estaNaEpoca;
+    }
+
+    public double calculaPrecoFinal(double precoAdicional, boolean estaNaEpoca) {
+        if (estaNaEpoca == true) {
+            return getPreco();
+        } else {
+            return getPreco() + precoAdicional;
+        }
+    }
 }
