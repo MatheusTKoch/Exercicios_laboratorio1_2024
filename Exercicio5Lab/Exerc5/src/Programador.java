@@ -13,4 +13,10 @@ public class Programador extends Pessoa {
     public void setLinguagem(String linguagemPreferida) {
         this.linguagemPreferida = linguagemPreferida;
     }
+
+    public void imprimeDados() {
+        System.out.println("Nome: "+ getNome());
+        System.out.println("Idade: "+ getIdade());
+        System.out.println("Linguaguem Preferida: " + linguagemPreferida);
+    }
 }

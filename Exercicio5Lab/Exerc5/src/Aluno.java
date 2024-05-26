@@ -13,4 +13,10 @@ public class Aluno extends Pessoa {
     public void setNota(double nota) {
         this.nota = nota;
     }
+
+    public void imprimeDados(){
+        System.out.println("Nome: "+ getNome());
+        System.out.println("Idade: "+ getIdade());
+        System.out.println("Nota: " + nota);
+    }
 }
