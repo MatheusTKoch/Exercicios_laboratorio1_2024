@@ -5,13 +5,16 @@ public class Exerc1 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Quantas notas serao incluidas?: ");
         int i;
+        double somaTotal = 0;
         int arrLength = scanner.nextInt();
-        String[] arrayNotas = new String[arrLength + 1];
+        double[] arrayNotas = new double[arrLength + 1];
         for (i = 0; i < arrLength; i++) {
             System.out.println("Adicione a nota: ");
-            String proxNota = scanner.next();
+            double proxNota = scanner.nextDouble();
             arrayNotas[i] = proxNota;
+            somaTotal = somaTotal + proxNota;
         }
-        System.out.println(arrayNotas);
+        System.out.println("A media aritmetica das notas: " + somaTotal/arrLength);
+        
     }
 }
