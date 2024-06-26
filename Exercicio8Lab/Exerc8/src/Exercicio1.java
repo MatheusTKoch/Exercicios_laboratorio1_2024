@@ -8,10 +8,10 @@ public class Exercicio1 {
     }
 
     public boolean verificaLivro(Livro[] arrLivro, String titulo) {
-        for(i=0; i < arrLivro.length; i++) {
-            if (arrLivro[i] == titulo) {
+        for (int i = 0; i < arrLivro.length; i++) {
+            if (arrLivro[i].getTitulo() == titulo) {
                 return true;
-            } 
+            }    
         }
         return false;
     }
