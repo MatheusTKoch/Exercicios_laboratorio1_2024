@@ -3,9 +3,9 @@ public class Exercicio2 {
     private String tituloLivro;
 
     public Livro retornaLivro(Livro[] arrLivro, String tituloLivro) {
-        for(i=0; i < arrLivro.length; i++) {
-           if (arrLivro[i] == tituloLivro) {
-            return arrLivro[i].toString();
+        for(int i=0; i < arrLivro.length; i++) {
+           if (arrLivro[i].getTitulo() == tituloLivro) {
+            return arrLivro[i];
            } 
         }
         return null;
