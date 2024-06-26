@@ -34,7 +34,7 @@ public class Livro {
         this.ano = ano;
      }
 
-    public String toStrin() {
+    public String toString() {
         return "Titulo: " + getTitulo() + "Autor: " + getAutor() + "Ano do livro: " + getAno();
     }
 }
