@@ -28,5 +28,19 @@ public class Livro {
         return dataCriacao;
     }
 
-    
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public String toString() {
+        return "Titulo do livro: " + getTitulo() + ", Autor: " + getAutor() + ", Preco: " + getPreco() + "R$, Data de Criacao: " + getDataCriacao();
+    }
 }
