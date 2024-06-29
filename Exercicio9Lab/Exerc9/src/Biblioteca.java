@@ -15,6 +15,14 @@ public class Biblioteca {
         arrayLivro = new Livro[tamanhoArray];
     }
 
-    
+    public boolean insereLivro(Livro livro) {
+        for (int i = 0; i < arrayLivro.length; i++) {
+            if (arrayLivro[i] != null) {
+                livro = arrayLivro[i];
+                return true;
+            }
+        }
+        return false;
+    }
     
 }
