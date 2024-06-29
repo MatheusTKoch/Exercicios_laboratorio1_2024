@@ -85,4 +85,16 @@ public class Biblioteca {
         }
         return valorTotal / divisor;
     }
+
+    public Livro livroComMaiorTitulo() {
+        String titulo = "";
+        Livro livroMaiorTitulo = null;
+        for (int i = 0; i < arrayLivro.length; i++) {
+            if (arrayLivro[i].getTitulo().length() > titulo.length()) {
+                titulo = arrayLivro[i].getTitulo();
+                livroMaiorTitulo = arrayLivro[i];
+            }
+        }
+        return livroMaiorTitulo;
+    }
 }
