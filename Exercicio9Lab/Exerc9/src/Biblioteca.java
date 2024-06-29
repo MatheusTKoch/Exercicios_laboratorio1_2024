@@ -33,4 +33,15 @@ public class Biblioteca {
         }
         return null;
     }
+
+    public Novo verificaDesconto(String titulo) {
+        Novo livroComDesconto;
+        for (int i = 0; i < arrayLivro.length; i++) {
+            livroComDesconto = (Novo) arrayLivro[i];
+            if (livroComDesconto.getValorDesconto() != 0) {
+                return livroComDesconto;
+            }
+        }
+        return null;
+    }
 }
