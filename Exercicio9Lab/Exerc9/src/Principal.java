@@ -19,6 +19,7 @@ public class Principal {
         Random random = new Random();
         Biblioteca bibliotecaUni = new Biblioteca((int)(Math.random() * 200 + 1));
         int quantAleatoria = (int)(Math.random() * 300 + 1);
+        System.out.println("Quantidade de livros para cadastro: " + quantAleatoria);
         for (int i = 0; i < quantAleatoria; i++) {
             int randomValue = random.nextInt(2) + 1;
             System.out.println("Informe o titulo do livro: ");
