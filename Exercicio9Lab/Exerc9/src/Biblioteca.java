@@ -75,4 +75,14 @@ public class Biblioteca {
         }
         return null;
     }
+
+    public double calculaMediaPreco() {
+        double valorTotal = 0;
+        int divisor = 0;
+        for (int i = 0; i < arrayLivro.length; i++) {
+            valorTotal += arrayLivro[i].getPreco();
+            divisor++;
+        }
+        return valorTotal / divisor;
+    }
 }
