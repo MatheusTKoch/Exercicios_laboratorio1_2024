@@ -9,8 +9,19 @@
 // Imprima as informações dos livros em ordem decrescente de ano de criação.
 // Imprima a média dos preços dos livros presentes na biblioteca.
 // Imprima as informações do livro com o maior título na biblioteca. 
+
+import java.util.Random;
+import java.util.Scanner;
+
 public class Principal {
     public static void main(String[] args) {
-        
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        Biblioteca bibliotecaUni = new Biblioteca((int)(Math.random() * 200 + 1));
+        int valorAleatorio = (int)(Math.random() * 300 + 1);
+        int randomValue = random.nextInt(2) + 1;
+        if (randomValue == 1) {
+
+        }
     }
 }
