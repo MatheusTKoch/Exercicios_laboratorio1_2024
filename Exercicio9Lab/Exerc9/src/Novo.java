@@ -2,7 +2,7 @@
 public class Novo extends Livro {
     private double valorDesconto;
 
-    public Novo(String titulo, String autor, double preco, String dataCriacao, double valorDesconto) {
+    public Novo(String titulo, String autor, double preco, int dataCriacao, double valorDesconto) {
         super(titulo, autor, preco, dataCriacao);
         this.valorDesconto = valorDesconto;
     }

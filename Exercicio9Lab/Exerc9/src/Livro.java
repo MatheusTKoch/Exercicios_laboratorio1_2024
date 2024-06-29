@@ -3,9 +3,9 @@ public class Livro {
     private String titulo;
     private String autor;
     private double preco;
-    private String dataCriacao;
+    private int dataCriacao;
 
-    public Livro(String titulo, String autor, double preco, String dataCriacao) {
+    public Livro(String titulo, String autor, double preco, int dataCriacao) {
         this.titulo = titulo;
         this.autor = autor;
         this.preco = preco;
@@ -24,7 +24,7 @@ public class Livro {
         return preco;
     }
 
-    public String getDataCriacao() {
+    public int getDataCriacao() {
         return dataCriacao;
     }
 

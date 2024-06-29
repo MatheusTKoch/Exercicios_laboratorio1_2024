@@ -8,8 +8,12 @@
 // crie o método calculaMediaPreco, que retorna a média dos preços dos livros presentes no array.
 // crie o método livroComMaiorTitulo, que retorna o livro com o maior título do array. Utilize o método length() da classe String, que retorna o tamanho do texto. Por exemplo: variavelString.length() retorna o tamanho (ou seja, a quantidade de caracteres) da variável variavelString.
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class Biblioteca {
     private Livro[] arrayLivro;
+    private int indice;
 
     public Biblioteca(int tamanhoArray) {
         arrayLivro = new Livro[tamanhoArray];
@@ -53,6 +57,21 @@ public class Biblioteca {
                 System.out.println("Edicao: " + livroComEdicao);
             }
             return livroComEdicao;
+        }
+        return null;
+    }
+
+    public Livro imprimeLivroPorAno() {
+        Arrays.sort(arrayLivro, 0, indice, new Comparator<Livro>() {
+            @Override
+            public int compare(Livro l1, Livro l2) {
+                return Integer.compare(l2.getDataCriacao(), l1.getDataCriacao());
+            }
+        });
+        for (Livro livro : arrayLivro) {
+            if (livro != null) {
+                System.out.println(livro);
+            }
         }
         return null;
     }

@@ -2,7 +2,7 @@
 public class Antigo extends Livro {
     private int numeroEdicao;
 
-    public Antigo(String titulo, String autor, double preco, String dataCriacao, int numeroEdicao) {
+    public Antigo(String titulo, String autor, double preco, int dataCriacao, int numeroEdicao) {
         super(titulo, autor, preco, dataCriacao);
         this.numeroEdicao = numeroEdicao;
     }
