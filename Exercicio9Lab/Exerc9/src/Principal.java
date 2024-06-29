@@ -23,9 +23,9 @@ public class Principal {
         for (int i = 0; i < quantAleatoria; i++) {
             int randomValue = random.nextInt(2) + 1;
             System.out.println("Informe o titulo do livro: ");
-            String titulo = scanner.nextLine();
+            String titulo = scanner.next();
             System.out.println("Informe o autor do livro: ");
-            String autor = scanner.nextLine();
+            String autor = scanner.next();
             System.out.println("Informe o preco do livro: ");
             double preco = scanner.nextDouble();
             System.out.println("Informe o ano de criacao: ");
@@ -41,6 +41,7 @@ public class Principal {
                 } else {
                     System.out.println("Erro no cadastro");
                 }
+                scanner.next();
                 
             } else if (randomValue == 2) {
                 System.out.println("Informe o numero da edicao: ");
@@ -52,6 +53,7 @@ public class Principal {
                 } else {
                     System.out.println("Erro no cadastro");
                 }
+                scanner.next();
             }
         }
         System.out.println("Insira o titulo do livro para pesquisar: ");
