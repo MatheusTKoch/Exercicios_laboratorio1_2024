@@ -44,4 +44,16 @@ public class Biblioteca {
         }
         return null;
     }
+
+    public Livro imprimeEdicoes() {
+        Antigo livroComEdicao;
+        for (int i = 0; i < arrayLivro.length; i++) {
+            livroComEdicao = (Antigo) arrayLivro[i];
+            if (livroComEdicao.getNumEdicao() != 0) {
+                System.out.println("Edicao: " + livroComEdicao);
+            }
+            return livroComEdicao;
+        }
+        return null;
+    }
 }
