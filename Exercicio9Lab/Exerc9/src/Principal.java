@@ -31,6 +31,11 @@ public class Principal {
         String titulo = scanner.nextLine();
         System.out.println("Informe o autor do livro: ");
         String autor = scanner.nextLine();
+        System.out.println("Informe o preco do livro: ");
+        double preco = scanner.nextDouble();
+        System.out.println("Informe o ano de criacao: ");
+        int anoCriacao = scanner.nextInt();
+        Livro novoLivro = new Livro(titulo, autor, preco, anoCriacao);
         
     }
 }
