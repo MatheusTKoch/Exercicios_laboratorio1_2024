@@ -16,6 +16,6 @@ public class Antigo extends Livro {
     }
 
     public String toString() {
-        return "Titulo do livro: " + getTitulo() + ", Autor: " + getAutor() + ", Preco: " + getPreco() + "R$, Data de Criacao: " + getDataCriacao() + ", Edicao Num: " + getNumEdicao();
+        return toString() + ", Edicao Num: " + getNumEdicao();
     }
 }
