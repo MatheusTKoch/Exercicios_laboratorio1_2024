@@ -21,7 +21,16 @@ public class Principal {
         int valorAleatorio = (int)(Math.random() * 300 + 1);
         int randomValue = random.nextInt(2) + 1;
         if (randomValue == 1) {
-
+            System.out.println("Insira o valor do desconto");
+            double desconto = scanner.nextDouble();
+        } else if (randomValue == 2) {
+            System.out.println("Informe o numero da edicao: ");
+            int edicao = scanner.nextInt();
         }
+        System.out.println("Informe o titulo do livro: ");
+        String titulo = scanner.nextLine();
+        System.out.println("Informe o autor do livro: ");
+        String autor = scanner.nextLine();
+        
     }
 }
