@@ -18,26 +18,43 @@ public class Principal {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         Biblioteca bibliotecaUni = new Biblioteca((int)(Math.random() * 200 + 1));
-        int valorAleatorio = (int)(Math.random() * 300 + 1);
-        int randomValue = random.nextInt(2) + 1;
-        System.out.println("Informe o titulo do livro: ");
-        String titulo = scanner.nextLine();
-        System.out.println("Informe o autor do livro: ");
-        String autor = scanner.nextLine();
-        System.out.println("Informe o preco do livro: ");
-        double preco = scanner.nextDouble();
-        System.out.println("Informe o ano de criacao: ");
-        int anoCriacao = scanner.nextInt();
-        Livro novoLivro = new Livro(titulo, autor, preco, anoCriacao);
-        if (randomValue == 1) {
-            System.out.println("Insira o valor do desconto");
-            double desconto = scanner.nextDouble();
-            Novo livroNovo = new Novo(titulo, autor, preco, anoCriacao, desconto);
-        } else if (randomValue == 2) {
-            System.out.println("Informe o numero da edicao: ");
-            int edicao = scanner.nextInt();
-            Antigo livroAntigo = new Antigo(titulo, autor, preco, anoCriacao, edicao);
+        int quantAleatoria = (int)(Math.random() * 300 + 1);
+        for (int i = 0; i < quantAleatoria; i++) {
+            int randomValue = random.nextInt(2) + 1;
+            System.out.println("Informe o titulo do livro: ");
+            String titulo = scanner.nextLine();
+            System.out.println("Informe o autor do livro: ");
+            String autor = scanner.nextLine();
+            System.out.println("Informe o preco do livro: ");
+            double preco = scanner.nextDouble();
+            System.out.println("Informe o ano de criacao: ");
+            int anoCriacao = scanner.nextInt();
+            Livro novoLivro = new Livro(titulo, autor, preco, anoCriacao);
+            if (randomValue == 1) {
+                System.out.println("Insira o valor do desconto");
+                double desconto = scanner.nextDouble();
+                Novo livroNovo = new Novo(titulo, autor, preco, anoCriacao, desconto);
+                boolean novoCadastro = bibliotecaUni.insereLivro(livroNovo);
+                if (novoCadastro == true) {
+                    System.out.println("Livro Cadastrado com Sucesso!");
+                } else {
+                    System.out.println("Erro no cadastro");
+                }
+                
+            } else if (randomValue == 2) {
+                System.out.println("Informe o numero da edicao: ");
+                int edicao = scanner.nextInt();
+                Antigo livroAntigo = new Antigo(titulo, autor, preco, anoCriacao, edicao);
+                boolean novoCadastro = bibliotecaUni.insereLivro(livroAntigo);
+                if (novoCadastro == true) {
+                    System.out.println("Livro Cadastrado com Sucesso!");
+                } else {
+                    System.out.println("Erro no cadastro");
+                }
+            }
         }
-
+        System.out.println("Insira o titulo do livro para pesquisar: ");
+        String titulo = scanner.nextLine();
+        Livro livroPorTitulo = bibliotecaUni.procuraLivroPorTitulo(titulo);
     }
 }
