@@ -25,4 +25,12 @@ public class Biblioteca {
         return false;
     }
     
+    public Livro procuraLivroPorTitulo(String titulo) {
+        for (int i = 0; i < arrayLivro.length; i++) {
+            if (arrayLivro[i].getTitulo() == titulo) {
+                return arrayLivro[i];
+            }
+        }
+        return null;
+    }
 }
