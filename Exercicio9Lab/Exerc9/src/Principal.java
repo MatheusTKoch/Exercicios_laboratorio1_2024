@@ -59,5 +59,12 @@ public class Principal {
         System.out.println("Insira o titulo do livro para pesquisar: ");
         String titulo = scanner.nextLine();
         Livro livroPorTitulo = bibliotecaUni.procuraLivroPorTitulo(titulo);
+        System.out.println("Insira o titulo do livro com desconto para pesquisar: ");
+        String tituloDesconto = scanner.nextLine();
+        Livro livroTitulo = bibliotecaUni.procuraLivroPorTitulo(tituloDesconto);
+        System.out.println(bibliotecaUni.imprimeEdicoes());
+        System.out.println(bibliotecaUni.imprimeLivroPorAno());
+        System.out.println(bibliotecaUni.calculaMediaPreco());
+        System.out.println(bibliotecaUni.livroComMaiorTitulo());
     }
 }
